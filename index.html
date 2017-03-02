@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>chou jiang</title>
+	<style type="text/css">
+		*{
+			padding:0;margin: 0;
+			box-sizing: border-box;
+			user-select: none;
+		}
+		.wrap{
+			width:400px;
+			margin:0 auto;
+			margin-top: 150px;
+		}
+		.item{
+			width:120px;
+			height: 120px;
+			float: left;
+			margin-right: 20px;
+			margin-bottom: 20px;
+			background-color: yellow;
+			text-align: center;line-height: 120px;
+			border-radius: 20px;
+		}
+		.start{
+			background-color: green;
+			cursor: pointer;
+		}
+		.item:nth-child(3n){
+			margin-right: 0;
+		}
+		.active{
+			background-color: red;
+		}
+	</style>
+</head>
+<body>
+<div class="wrap">
+	<div class="item block  JS_item_1">1</div>
+	<div class="item block JS_item_2">2</div>
+	<div class="item block JS_item_3">3</div>
+	<div class="item block JS_item_0">8</div>
+	<div class="item start">G</div>
+	<div class="item block JS_item_4">4</div>
+	<div class="item block JS_item_7">7</div>
+	<div class="item block JS_item_6">6</div>
+	<div class="item block JS_item_5">5</div>
+</div>
+</body>
+<script src="http://cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script>
+
+<script type="text/javascript" src="./RotatePlate.js"></script>
+<script type="text/javascript">
+var m = new rp({
+	targetClassName:'block',
+	rotateCirclesNumbers:4,
+	url:'http:',
+	callback:function(val){
+		console.log(val);
+	}
+})
+m.init();
+</script>
+</html>
